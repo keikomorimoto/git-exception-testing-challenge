@@ -13,9 +13,11 @@ def get_last_line(out):
 def remove_file_or_directory_if_exists(filename):
     try:
         os.remove(filename)  # Remove file if exists
-        os.rmdir(filename)   # Remove directory (folder) if exists
     except OSError:
-        pass
+        try:
+            os.rmdir(filename)  # Remove directory (folder) if exists
+        except OSError:
+            pass
 
 
 # Test to make sure exceptions aren't arising directly from raise statements
