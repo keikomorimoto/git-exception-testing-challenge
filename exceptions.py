@@ -1,3 +1,4 @@
+import math
 # BROAD REASONS WHY YOU MIGHT GET AN EXCEPTION
 # (1) Trying to refer to something that doesn't exist
 # (2) Using a value that is inappropriate in some way
@@ -24,65 +25,65 @@
 
 # AttributeError - EXAMPLE
 def produce_attribute_error():
-    # print(1.234.upper())
-    pass
-
+    print(1.234.upper())
 
 # KeyError
 def produce_key_error():
-    pass
-
+    student = {
+        "name": "Keiko",
+        "course": "CFG",
+    }
+    print(student["age"])
 
 # IndexError
 def produce_index_error():
-    pass
-
+    letters = ["A", "B"]
+    print(letters[3])
 
 # NameError
 def produce_name_error():
-    pass
-
+    name = "Keiko"
+    print(address)
 
 # UnboundLocalError
 def produce_unbound_local_error():
-    pass
-
+    print(score)
+    score = 100
 
 # TypeError
 def produce_type_error():
-    pass
-
+    score = 100
+    name = "Keiko"
+    myResult = score / name
 
 # ValueError
 def produce_value_error():
-    pass
+    math.sqrt(-3)
 
 
 # ZeroDivisionError
 def produce_zero_division_error():
-    pass
+    10 / 0
 
 
 # OverflowError
 def produce_overflow_error():
-    pass
+    print(math.exp(100000000))
 
 
 # FileNotFoundError
 def produce_file_not_found_error():
-    pass
-
+    f = open("test.txt", "r")
 
 # UnicodeEncodeError
 def produce_unicode_encode_error():
-    pass
-
+    u"\u0411".encode("iso-8859-15")
 
 # ModuleNotFoundError
 def produce_module_not_found_error():
-    pass
+    import NumPyyy
 
 
 # ImportError
 def produce_import_error():
-    pass
+    import NumPyyy
